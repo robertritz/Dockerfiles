@@ -1,0 +1,17 @@
+#install docker
+sudo apt-get install docker.io
+
+#login to docker
+docker login --username=mongolai --email=robert@mongol.ai
+
+#build image (cd to dockerfile location)
+docker build .
+
+#check images
+docker images
+
+#tag image
+docker tag [image name] mongolai/custom-deepspeech:latest
+
+#push to dockerhub
+docker push mongolai/custom-deepspeech:latest
